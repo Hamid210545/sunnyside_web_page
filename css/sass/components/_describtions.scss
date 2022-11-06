@@ -1,0 +1,140 @@
+@use "../variables/color" as *;
+.describtions {
+ font-family: "Fraunces";
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr;
+ @media (max-width: 767px) {
+  grid-template-rows: auto 1fr auto 1fr auto auto;
+  grid-template-columns: 1fr;
+ }
+ .img {
+  width: 100%;
+  height: 50rem;
+  background-position: 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  @media (max-width: 767px) {
+   &:not(.img3, .img4) {
+    height: 35rem;
+   }
+  }
+  .text {
+   width: 45rem;
+   text-align: center;
+   @media (max-width: 767px) {
+    width: 35rem;
+    padding: 1rem;
+   }
+   .title {
+    h2 {
+     font-size: 3.5rem;
+     font-weight: 900;
+     color: $Very-dark-desaturated-blue;
+    }
+   }
+   .content {
+    p {
+     font-family: "Barlow";
+     margin: 3rem 0;
+     color: $Dark-grayish-blue;
+     line-height: 3rem;
+     font-size: 2rem;
+    }
+   }
+  }
+ }
+ .desc {
+  width: 100%;
+  height: 50rem;
+  display: grid;
+  place-content: center;
+  @media (max-width: 767px) {
+   height: 40rem;
+  }
+  .text {
+   width: 45rem;
+   @media (max-width: 767px) {
+    width: 35rem;
+    padding: 1rem;
+    text-align: center;
+   }
+   .title {
+    h2 {
+     font-size: 3.5rem;
+     font-weight: 900;
+    }
+   }
+   .content {
+    p {
+     font-family: "Barlow";
+     margin: 3rem 0;
+     color: $Dark-grayish-blue;
+     line-height: 3rem;
+     @media (max-width: 767px) {
+      margin: 2rem;
+     }
+    }
+   }
+   a {
+    position: relative;
+    &::after {
+     content: "";
+     position: absolute;
+     width: 115%;
+     height: 0.8rem;
+     background-color: $Yellow;
+     border-radius: 1rem;
+     left: 50%;
+     bottom: 0;
+     transform: translateX(-50%);
+     z-index: -1;
+    }
+   }
+  }
+  &.desc2 a::after {
+   background-color: $Soft-red;
+  }
+ }
+ .desc1 h2 {
+  width: 30rem;
+  @media (max-width: 767px) {
+   width: 100%;
+   padding: 1rem;
+  }
+ }
+ .img1 {
+  background-image: url(../images/desktop/image-transform.jpg);
+  @media (max-width: 767px) {
+   background-image: url(../images/mobile/image-transform.jpg);
+  }
+ }
+ .img2 {
+  background-image: url(../images/desktop/image-stand-out.jpg);
+  @media (max-width: 767px) {
+   background-image: url(../images/mobile/image-stand-out.jpg);
+  }
+ }
+ .img3 {
+  background-image: url(../images/desktop/image-graphic-design.jpg);
+  @media (max-width: 767px) {
+   background-image: url(../images/mobile/image-graphic-design.jpg);
+  }
+ }
+ .img4 {
+  background-image: url(../images/desktop/image-photography.jpg);
+  @media (max-width: 767px) {
+   background-image: url(../images/mobile/image-photography.jpg);
+  }
+ }
+ @media (max-width: 767px) {
+  .img1 {
+   order: -2;
+  }
+  .desc1 {
+   order: -1;
+  }
+ }
+}

@@ -1,0 +1,29 @@
+@use "../variables/color" as *;
+footer {
+ font-family: "Barlow";
+ display: grid;
+ place-content: center;
+ row-gap: 5rem;
+ padding-top: 8rem;
+ padding-bottom: 8rem;
+ background-color: $Dark-moderate-cyan;
+ .logo {
+  text-align: center;
+ }
+ .links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  li {
+   color: $Dark-desaturated-cyan;
+   padding: 1rem 3rem;
+  }
+ }
+ .contact {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  justify-self: center;
+  margin-top: 2rem;
+ }
+}
